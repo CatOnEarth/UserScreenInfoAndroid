@@ -3,6 +3,7 @@
 <p>Documentation(Dozywizard): https://catonearth.github.io/UserScreenInfoAndroid/html/<p>
 
 <p>
+    Screenshot account fragment  
     <img
     src="/screenshots/account_screenshot.png"
     width="30%" 
@@ -13,6 +14,7 @@
 <p>
 
 <p>
+    Screenshot account fill fragment  
     <img
     src="/screenshots/account_fill_screenshot.png"
     width="30%" 
