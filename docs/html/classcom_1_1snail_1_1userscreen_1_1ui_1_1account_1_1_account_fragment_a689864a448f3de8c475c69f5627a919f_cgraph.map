@@ -1,0 +1,11 @@
+<map id="com.snail.userscreen.ui.account.AccountFragment.onCreateView" name="com.snail.userscreen.ui.account.AccountFragment.onCreateView">
+<area shape="rect" id="node1" title=" " alt="" coords="5,136,220,177"/>
+<area shape="rect" id="node2" href="$classcom_1_1snail_1_1userscreen_1_1databinding_1_1_fragment_account_binding.html#a488989114baab155106a2ac28f3061ba" title=" " alt="" coords="281,5,501,47"/>
+<area shape="rect" id="node3" href="$classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_view_model.html#ab12e62c93b7cd19725928c0f3342054d" title=" " alt="" coords="271,71,511,112"/>
+<area shape="rect" id="node4" href="$classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_view_model.html#aa50a58cb26b7173621beaa1e26717d60" title=" " alt="" coords="271,136,510,177"/>
+<area shape="rect" id="node5" href="$classcom_1_1snail_1_1userscreen_1_1databinding_1_1_fragment_account_binding.html#ac525225567ff421fe7e6c9579366f9e2" title=" " alt="" coords="281,225,501,267"/>
+<area shape="rect" id="node6" href="$classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment.html#a1a5f822ee36ea22ac14a15c7b32b237f" title=" " alt="" coords="268,291,513,332"/>
+<area shape="rect" id="node7" href="$classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment.html#a2a525006b0403e80d24d3cc19afb08e5" title=" " alt="" coords="561,225,776,267"/>
+<area shape="rect" id="node8" href="$classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment.html#a559bb2e7817b1e6a32270e26df432518" title=" " alt="" coords="561,291,776,332"/>
+<area shape="rect" id="node9" href="$classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment.html#aaba297a48485b263c9c645a2cda04985" title=" " alt="" coords="561,356,776,397"/>
+</map>

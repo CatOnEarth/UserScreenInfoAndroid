@@ -1,0 +1,118 @@
+\hypertarget{_main_activity_8java_source}{}\doxysection{Main\+Activity.\+java}
+\label{_main_activity_8java_source}\index{app/src/main/java/com/snail/userscreen/MainActivity.java@{app/src/main/java/com/snail/userscreen/MainActivity.java}}
+\mbox{\hyperlink{_main_activity_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00001}00001 \textcolor{keyword}{package }com.snail.userscreen;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00004}00004 \textcolor{keyword}{import} android.annotation.SuppressLint;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00005}00005 \textcolor{keyword}{import} android.content.Context;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00006}00006 \textcolor{keyword}{import} android.content.Intent;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00007}00007 \textcolor{keyword}{import} android.content.SharedPreferences;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00008}00008 \textcolor{keyword}{import} android.os.Bundle;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00009}00009 \textcolor{keyword}{import} android.view.MenuItem;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00010}00010 \textcolor{keyword}{import} android.view.Menu;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00011}00011 \textcolor{keyword}{import} android.view.View;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00012}00012 \textcolor{keyword}{import} android.widget.TextView;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00014}00014 \textcolor{keyword}{import} com.google.android.material.navigation.NavigationView;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00016}00016 \textcolor{keyword}{import} androidx.annotation.NonNull;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00017}00017 \textcolor{keyword}{import} androidx.navigation.NavController;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00018}00018 \textcolor{keyword}{import} androidx.navigation.Navigation;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00019}00019 \textcolor{keyword}{import} androidx.navigation.ui.AppBarConfiguration;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00020}00020 \textcolor{keyword}{import} androidx.navigation.ui.NavigationUI;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00021}00021 \textcolor{keyword}{import} androidx.drawerlayout.widget.DrawerLayout;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00022}00022 \textcolor{keyword}{import} androidx.appcompat.app.AppCompatActivity;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00024}00024 \textcolor{keyword}{import} com.snail.userscreen.databinding.ActivityMainBinding;}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00026}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity}{00026}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity}{MainActivity}} \textcolor{keyword}{extends} AppCompatActivity implements DrawerLayout.DrawerListener \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00028}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a2ac79686c34c90d90a85bd8a20a76063}{00028}}     \textcolor{keyword}{private} AppBarConfiguration \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a2ac79686c34c90d90a85bd8a20a76063}{mAppBarConfiguration}};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00030}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a1c5ae201e5e6550a9ed4291655e6c552}{00030}}     \textcolor{keyword}{private} TextView \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a1c5ae201e5e6550a9ed4291655e6c552}{textViewUsernameNavView}};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00031}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_af2bec69eba105e34337b579aefc9635c}{00031}}     \textcolor{keyword}{private} TextView \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_af2bec69eba105e34337b579aefc9635c}{textViewUserEmailNavView}};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00033}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_aa8d7863cafbb327a785d5a8a5583d347}{00033}}     \textcolor{keyword}{private} SharedPreferences \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_aa8d7863cafbb327a785d5a8a5583d347}{mSettings}};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00034}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a454906c79d07a7b57c57075d06594d70}{00034}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keyword}{final} String \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a454906c79d07a7b57c57075d06594d70}{APP\_PREFERENCES}}            = \textcolor{stringliteral}{"{}user\_info"{}};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00035}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_ab196869783d634b89dc239ef08f10546}{00035}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keyword}{final} String \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_ab196869783d634b89dc239ef08f10546}{APP\_PREFERENCES\_USERNAME}}   = \textcolor{stringliteral}{"{}user\_name"{}};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00036}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_af4c078707aabaa11bca3f66a7d301e7c}{00036}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keyword}{final} String \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_af4c078707aabaa11bca3f66a7d301e7c}{APP\_PREFERENCES\_USER\_EMAIL}} = \textcolor{stringliteral}{"{}user\_email"{}};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00038}00038     @Override}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00039}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_ab9566d7f266d00f2124b1f7bc6bbac3f}{00039}}     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_ab9566d7f266d00f2124b1f7bc6bbac3f}{onCreate}}(Bundle savedInstanceState) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00040}00040         super.onCreate(savedInstanceState);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00042}00042         \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1databinding_1_1_activity_main_binding}{com.snail.userscreen.databinding.ActivityMainBinding}} binding = \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1databinding_1_1_activity_main_binding}{ActivityMainBinding}}.\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1databinding_1_1_activity_main_binding_a099945bb4b005451119ffc4fdb887623}{inflate}}(getLayoutInflater());}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00043}00043         setContentView(binding.\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1databinding_1_1_activity_main_binding_a4c8c1674c86994234bdc3522c97d545b}{getRoot}}());}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00045}00045         setSupportActionBar(binding.\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1databinding_1_1_activity_main_binding_ac7aba85909a478d150efcaf59c119977}{appBarMain}}.\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1databinding_1_1_app_bar_main_binding_abc2a3286c39d9f39b6c4da5c4c2a4d32}{toolbar}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00047}00047         DrawerLayout drawer = binding.\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1databinding_1_1_activity_main_binding_afedebd051910716736191e4f8a1fa8b6}{drawerLayout}};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00048}00048         drawer.addDrawerListener(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00050}00050         NavigationView navigationView = binding.\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1databinding_1_1_activity_main_binding_a32b8f04816735bb61025eeddffe1f38f}{navView}};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00052}00052         \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a2ac79686c34c90d90a85bd8a20a76063}{mAppBarConfiguration}} = \textcolor{keyword}{new} AppBarConfiguration.Builder(}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00053}00053                 R.id.nav\_account, R.id.nav\_info, R.id.nav\_image)}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00054}00054                 .setOpenableLayout(drawer)}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00055}00055                 .build();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00056}00056         NavController navController = Navigation.findNavController(\textcolor{keyword}{this}, R.id.nav\_host\_fragment\_content\_main);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00057}00057         NavigationUI.setupActionBarWithNavController(\textcolor{keyword}{this}, navController, \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a2ac79686c34c90d90a85bd8a20a76063}{mAppBarConfiguration}});}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00058}00058         NavigationUI.setupWithNavController(navigationView, navController);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00060}00060         View headerView = navigationView.getHeaderView(0);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00061}00061         \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a1c5ae201e5e6550a9ed4291655e6c552}{textViewUsernameNavView}}  = headerView.findViewById(R.id.textViewUsername);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00062}00062         \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_af2bec69eba105e34337b579aefc9635c}{textViewUserEmailNavView}} = headerView.findViewById(R.id.textViewUserEmail);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00064}00064         \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_aa8d7863cafbb327a785d5a8a5583d347}{mSettings}} = getSharedPreferences(\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a454906c79d07a7b57c57075d06594d70}{APP\_PREFERENCES}}, Context.MODE\_PRIVATE);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00066}00066     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00068}00068     @Override}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00069}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_ab088b8f5504ef3294e0af898f9dd2f15}{00069}}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_ab088b8f5504ef3294e0af898f9dd2f15}{onCreateOptionsMenu}}(Menu menu) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00070}00070         getMenuInflater().inflate(R.menu.main, menu);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00071}00071         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00072}00072     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00074}00074     @SuppressLint(\textcolor{stringliteral}{"{}NonConstantResourceId"{}})}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00075}00075     @Override}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00076}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a8e6c868b0832678836b26c61f72c66ee}{00076}}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a8e6c868b0832678836b26c61f72c66ee}{onOptionsItemSelected}}(MenuItem item) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00077}00077         \textcolor{keywordflow}{if} (item.getItemId() == R.id.action\_settings) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00078}00078             \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a84a48fbbd07c5bc135b7b5b8034e5a15}{startSettingActivity}}();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00079}00079             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00080}00080         \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00081}00081         \textcolor{keywordflow}{return} super.onOptionsItemSelected(item);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00082}00082     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00084}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a84a48fbbd07c5bc135b7b5b8034e5a15}{00084}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a84a48fbbd07c5bc135b7b5b8034e5a15}{startSettingActivity}}() \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00085}00085         Intent intent = \textcolor{keyword}{new} Intent(\textcolor{keyword}{this}, \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity}{SettingsActivity}}.class);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00086}00086         startActivity(intent);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00087}00087     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00089}00089     @Override}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00090}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a0c4c8a596913651bed21c4aae646f4ea}{00090}}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a0c4c8a596913651bed21c4aae646f4ea}{onSupportNavigateUp}}() \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00091}00091         NavController navController = Navigation.findNavController(\textcolor{keyword}{this}, R.id.nav\_host\_fragment\_content\_main);}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00092}00092         \textcolor{keywordflow}{return} NavigationUI.navigateUp(navController, \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a2ac79686c34c90d90a85bd8a20a76063}{mAppBarConfiguration}})}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00093}00093                 || super.onSupportNavigateUp();}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00094}00094     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00096}00096     @Override}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00097}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a64202199555148738409bcc07e429f33}{00097}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a64202199555148738409bcc07e429f33}{onDrawerSlide}}(@NonNull View drawerView, \textcolor{keywordtype}{float} slideOffset) \{ \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00099}00099     @Override}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00100}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_aaccb321bcc1e2a52667e2552bd2cd147}{00100}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_aaccb321bcc1e2a52667e2552bd2cd147}{onDrawerOpened}}(@NonNull View drawerView) \{}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00101}00101         \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a1c5ae201e5e6550a9ed4291655e6c552}{textViewUsernameNavView}}.setText(\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_aa8d7863cafbb327a785d5a8a5583d347}{mSettings}}.getString(\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_ab196869783d634b89dc239ef08f10546}{APP\_PREFERENCES\_USERNAME}},}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00102}00102                                                             getResources().getString(R.string.nav\_header\_title)));}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00103}00103         \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_af2bec69eba105e34337b579aefc9635c}{textViewUserEmailNavView}}.setText(\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_aa8d7863cafbb327a785d5a8a5583d347}{mSettings}}.getString(\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_af4c078707aabaa11bca3f66a7d301e7c}{APP\_PREFERENCES\_USER\_EMAIL}},}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00104}00104                                                             getResources().getString(R.string.nav\_header\_subtitle)));}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00105}00105     \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00107}00107     @Override}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00108}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a451816cc80ebe83f0f8d89ed8e824449}{00108}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_a451816cc80ebe83f0f8d89ed8e824449}{onDrawerClosed}}(@NonNull View drawerView) \{  \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00110}00110     @Override}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00111}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_aed046c2ae686dc59814f1e57afc07cc9}{00111}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity_aed046c2ae686dc59814f1e57afc07cc9}{onDrawerStateChanged}}(\textcolor{keywordtype}{int} newState) \{  \}}
+\DoxyCodeLine{\Hypertarget{_main_activity_8java_source_l00112}00112 \}}
+
+\end{DoxyCode}
