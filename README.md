@@ -4,6 +4,8 @@
 
 <img
   src="/screenshots/account_screenshot.png"
+  width="500" 
+  height="600"
   alt="Alt text"
   title="Optional title"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
