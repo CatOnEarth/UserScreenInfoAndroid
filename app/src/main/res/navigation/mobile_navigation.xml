@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_account"
-        android:name="com.snail.userscreen.ui.account.HomeFragment"
+        android:name="com.snail.userscreen.ui.account.AccountFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_account" />
 
     <fragment
         android:id="@+id/nav_info"
-        android:name="com.snail.userscreen.ui.information.GalleryFragment"
+        android:name="com.snail.userscreen.ui.information.InformationFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_information" />
 
     <fragment
         android:id="@+id/nav_image"
-        android:name="com.snail.userscreen.ui.imageView.SlideshowFragment"
+        android:name="com.snail.userscreen.ui.imageView.ImageFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_image" />
 </navigation>

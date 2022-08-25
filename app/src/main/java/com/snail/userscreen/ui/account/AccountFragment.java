@@ -1,9 +1,12 @@
 package com.snail.userscreen.ui.account;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -11,28 +14,31 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.snail.userscreen.databinding.FragmentHomeBinding;
+import com.snail.userscreen.databinding.FragmentAccountBinding;
 
-public class HomeFragment extends Fragment {
+public class AccountFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
+    private FragmentAccountBinding binding;
     private EditText editTextAccUserName;
     private EditText editTextAccEmailUser;
 
+    public static final String APP_PREFERENCES = "user_info";
+
+    private SharedPreferences mSettings;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel accountViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+        AccountViewModel accountViewModel =
+                new ViewModelProvider(this).get(AccountViewModel.class);
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding = FragmentAccountBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textViewAccUserName  = binding.textViewAccUserName;
         final TextView textViewAccEmailUser = binding.textViewAccUserEmail;
 
-        accountViewModel.getText().observe(getViewLifecycleOwner(), textViewAccUserName::setText);
-        accountViewModel.getkText().observe(getViewLifecycleOwner(), textViewAccEmailUser::setText);
+        accountViewModel.getTextUsername().observe(getViewLifecycleOwner(), textViewAccUserName::setText);
+        accountViewModel.getTextEmailUser().observe(getViewLifecycleOwner(), textViewAccEmailUser::setText);
 
         editTextAccUserName  = binding.editTextTextPersonName;
         editTextAccEmailUser = binding.editTextTextEmailAddress;
@@ -46,7 +52,29 @@ public class HomeFragment extends Fragment {
 
         }
 
+        mSettings = this.requireActivity().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+
+        Button bSaveInfo = binding.buttonChangeInfo;
+
+        View.OnClickListener saveUserInfo = view -> saveUserInformation();
+
+        bSaveInfo.setOnClickListener(saveUserInfo);
+
         return root;
+    }
+
+    private void saveUserInformation() {
+        if (IsInfoCorrect()) {
+            SharedPreferences.Editor editor = mSettings.edit();
+            editor.putString("username",  editTextAccUserName.getText().toString());
+            editor.putString("useremail", editTextAccEmailUser.getText().toString());
+            editor.apply();
+        }
+    }
+
+    private boolean IsInfoCorrect() {
+        return editTextAccEmailUser.getText().toString().length() != 0 &&
+                editTextAccUserName.getText().toString().length() != 0;
     }
 
     @Override
