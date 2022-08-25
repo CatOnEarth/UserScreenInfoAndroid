@@ -4,8 +4,8 @@
 
 <img
   src="/screenshots/account_screenshot.png"
-  width="50%" 
-  height="50%"
+  width="20%" 
+  height="20%"
   alt="Alt text"
   title="Optional title"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
