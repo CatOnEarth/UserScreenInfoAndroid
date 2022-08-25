@@ -1,8 +1,12 @@
 package com.snail.userscreen;
 
 
+import static com.snail.userscreen.ui.account.AccountFragment.APP_PREFERENCES;
+
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.Menu;
@@ -11,6 +15,7 @@ import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -20,11 +25,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.snail.userscreen.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements DrawerLayout.DrawerListener {
 
     private AppBarConfiguration mAppBarConfiguration;
     public TextView textViewUsernameNavView;
     public TextView textViewUserEmailNavView;
+    private SharedPreferences mSettings;;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.appBarMain.toolbar);
         DrawerLayout drawer = binding.drawerLayout;
+        drawer.addDrawerListener(this);
         NavigationView navigationView = binding.navView;
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -48,8 +55,10 @@ public class MainActivity extends AppCompatActivity {
         View headerView = navigationView.getHeaderView(0);
         textViewUsernameNavView  = headerView.findViewById(R.id.textViewUsername);
         textViewUserEmailNavView = headerView.findViewById(R.id.textViewUserEmail);
-        textViewUsernameNavView.setText("username");
-        textViewUserEmailNavView.setText("email.user@domain.com");
+
+        mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+        textViewUsernameNavView.setText(mSettings.getString("username", ""));
+        textViewUserEmailNavView.setText(mSettings.getString("useremail", ""));
 
     }
 
@@ -79,5 +88,25 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    @Override
+    public void onDrawerSlide(@NonNull View drawerView, float slideOffset) {
+    }
+
+    @Override
+    public void onDrawerOpened(@NonNull View drawerView) {
+        textViewUsernameNavView.setText(mSettings.getString("username", ""));
+        textViewUserEmailNavView.setText(mSettings.getString("useremail", ""));
+    }
+
+    @Override
+    public void onDrawerClosed(@NonNull View drawerView) {
+
+    }
+
+    @Override
+    public void onDrawerStateChanged(int newState) {
+
     }
 }
