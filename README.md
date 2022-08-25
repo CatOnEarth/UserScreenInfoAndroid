@@ -7,7 +7,7 @@
 <p>
 <p>
     <img
-    src="/screenshots/account_screenshot.png"
+    src="screenshots/account_screenshot.png"
     width="30%" 
     height="30%"
     style="display: inline-block; margin: 0 auto; max-width: 300px">
@@ -18,7 +18,7 @@
 <p>
 <p> 
     <img
-    src="/screenshots/account_fill_screenshot.png"
+    src="screenshots/account_fill_screenshot.png"
     width="30%" 
     height="30%"
     style="display: inline-block; margin: 0 auto; max-width: 300px">
@@ -29,7 +29,7 @@
 <p>
 <p> 
     <img
-    src="/screenshots/info_screenshot.png"
+    src="screenshots/info_screenshot.png"
     width="30%" 
     height="30%"
     style="display: inline-block; margin: 0 auto; max-width: 300px">
@@ -40,7 +40,7 @@
 <p>
 <p> 
     <img
-    src="/screenshots/image_screenshot.png"
+    src="screenshots/image_screenshot.png"
     width="30%" 
     height="30%"
     style="display: inline-block; margin: 0 auto; max-width: 300px">
@@ -51,7 +51,7 @@
 <p>
 <p> 
     <img
-    src="/screenshots/nav_screenshot.png"
+    src="screenshots/nav_screenshot.png"
     width="30%" 
     height="30%"
     style="display: inline-block; margin: 0 auto; max-width: 300px">
@@ -62,7 +62,7 @@
 <p>
 <p> 
     <img
-    src="/screenshots/menu_screenshot.png"
+    src="screenshots/menu_screenshot.png"
     width="30%" 
     height="30%"
     style="display: inline-block; margin: 0 auto; max-width: 300px">
@@ -73,7 +73,7 @@
 <p>
 <p> 
     <img
-    src="/screenshots/settings_screenshot.png"
+    src="screenshots/settings_screenshot.png"
     width="30%" 
     height="30%"
     style="display: inline-block; margin: 0 auto; max-width: 300px">
