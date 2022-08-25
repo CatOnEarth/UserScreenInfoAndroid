@@ -73,7 +73,7 @@
 <p>
 <p> 
     <img
-    src="/screenshots/setting_screenshot.png"
+    src="/screenshots/settings_screenshot.png"
     width="30%" 
     height="30%"
     style="display: inline-block; margin: 0 auto; max-width: 300px">
