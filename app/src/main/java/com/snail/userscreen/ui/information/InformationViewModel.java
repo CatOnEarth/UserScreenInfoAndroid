@@ -1,5 +1,10 @@
 package com.snail.userscreen.ui.information;
 
+import static com.snail.userscreen.ui.account.AccountFragment.APP_PREFERENCES;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -23,5 +28,13 @@ public class InformationViewModel extends ViewModel {
 
     public LiveData<String> getTextEmailUser() {
         return textEmailUser;
+    }
+
+    public void setData(InformationFragment context) {
+        SharedPreferences mSettings;
+        mSettings = context.requireActivity().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+
+        textUsername.setValue(mSettings.getString("username", ""));
+        textEmailUser.setValue(mSettings.getString("useremail", ""));
     }
 }

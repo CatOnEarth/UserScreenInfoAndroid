@@ -1,9 +1,12 @@
 package com.snail.userscreen;
 
+
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.Menu;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -19,6 +22,8 @@ import com.snail.userscreen.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    public TextView textViewUsernameNavView;
+    public TextView textViewUserEmailNavView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
     }
 
     @Override
@@ -57,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startSettingActivity() {
-
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
     }
 
     @Override

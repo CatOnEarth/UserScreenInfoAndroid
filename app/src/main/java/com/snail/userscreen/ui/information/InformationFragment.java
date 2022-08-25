@@ -21,6 +21,8 @@ public class InformationFragment extends Fragment {
         InformationViewModel informationViewModel =
                 new ViewModelProvider(this).get(InformationViewModel.class);
 
+        informationViewModel.setData(this);
+
         binding = FragmentInformationBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 

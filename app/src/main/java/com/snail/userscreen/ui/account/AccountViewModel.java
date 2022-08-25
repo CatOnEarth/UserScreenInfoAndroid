@@ -25,12 +25,4 @@ public class AccountViewModel extends ViewModel {
     public LiveData<String> getTextEmailUser() {
         return textEmailUser;
     }
-
-    public void SetUsername(String username) {
-        textUsername.setValue(username);
-    }
-
-    public void SetEmailUser(String email) {
-        textEmailUser.setValue(email);
-    }
 }
