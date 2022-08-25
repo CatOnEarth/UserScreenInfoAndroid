@@ -10,35 +10,35 @@
 \DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00006}00006 \textcolor{keyword}{import} androidx.appcompat.app.AppCompatActivity;}
 \DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00007}00007 \textcolor{keyword}{import} androidx.preference.PreferenceFragmentCompat;}
 \DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00008}00008 }
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00009}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity}{00009}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity}{SettingsActivity}} \textcolor{keyword}{extends} AppCompatActivity \{}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00010}00010 }
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00011}00011     @Override}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00012}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity_ac6310e94ab51e8495ac83da01c36750a}{00012}}     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity_ac6310e94ab51e8495ac83da01c36750a}{onCreate}}(Bundle savedInstanceState) \{}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00013}00013         super.onCreate(savedInstanceState);}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00014}00014         setContentView(R.layout.settings\_activity);}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00015}00015 }
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00016}00016         \textcolor{keywordflow}{if} (savedInstanceState == \textcolor{keyword}{null}) \{}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00017}00017             getSupportFragmentManager().beginTransaction().replace(R.id.settings, \textcolor{keyword}{new} \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity_1_1_settings_fragment}{SettingsFragment}}()).commit();}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00018}00018         \}}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00019}00019 }
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00020}00020         ActionBar actionBar = getSupportActionBar();}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00021}00021         \textcolor{keywordflow}{if} (actionBar != \textcolor{keyword}{null}) \{}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00022}00022             actionBar.setDisplayHomeAsUpEnabled(\textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00023}00023         \}}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00024}00024     \}}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00025}00025 }
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00026}00026     @Override}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00027}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity_addd69b503138ccbc1d2388b52b1fa3c8}{00027}}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity_addd69b503138ccbc1d2388b52b1fa3c8}{onSupportNavigateUp}}() \{}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00028}00028         onBackPressed();}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00029}00029         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00030}00030     \}}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00031}00031 }
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00032}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity_1_1_settings_fragment}{00032}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keyword}{class }\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity_1_1_settings_fragment}{SettingsFragment}} \textcolor{keyword}{extends} PreferenceFragmentCompat \{}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00033}00033         @Override}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00034}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity_1_1_settings_fragment_a734796eff19cc1ce1b1c69ec6685b7b9}{00034}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity_1_1_settings_fragment_a734796eff19cc1ce1b1c69ec6685b7b9}{onCreatePreferences}}(Bundle savedInstanceState, String rootKey) \{}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00035}00035             setPreferencesFromResource(R.xml.root\_preferences, rootKey);}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00036}00036         \}}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00037}00037     \}}
-\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00038}00038 \}}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00012}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity}{00012}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity}{SettingsActivity}} \textcolor{keyword}{extends} AppCompatActivity \{}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00014}00014     @Override}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00015}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity_ac6310e94ab51e8495ac83da01c36750a}{00015}}     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity_ac6310e94ab51e8495ac83da01c36750a}{onCreate}}(Bundle savedInstanceState) \{}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00016}00016         super.onCreate(savedInstanceState);}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00017}00017         setContentView(R.layout.settings\_activity);}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00019}00019         \textcolor{keywordflow}{if} (savedInstanceState == \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00020}00020             getSupportFragmentManager().beginTransaction().replace(R.id.settings, \textcolor{keyword}{new} \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity_1_1_settings_fragment}{SettingsFragment}}()).commit();}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00021}00021         \}}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00023}00023         ActionBar actionBar = getSupportActionBar();}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00024}00024         \textcolor{keywordflow}{if} (actionBar != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00025}00025             actionBar.setDisplayHomeAsUpEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00026}00026         \}}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00027}00027     \}}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00034}00034     @Override}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00035}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity_addd69b503138ccbc1d2388b52b1fa3c8}{00035}}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity_addd69b503138ccbc1d2388b52b1fa3c8}{onSupportNavigateUp}}() \{}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00036}00036         onBackPressed();}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00037}00037         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00038}00038     \}}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00041}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity_1_1_settings_fragment}{00041}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keyword}{class }\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity_1_1_settings_fragment}{SettingsFragment}} \textcolor{keyword}{extends} PreferenceFragmentCompat \{}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00042}00042         @Override}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00043}\mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity_1_1_settings_fragment_a734796eff19cc1ce1b1c69ec6685b7b9}{00043}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_settings_activity_1_1_settings_fragment_a734796eff19cc1ce1b1c69ec6685b7b9}{onCreatePreferences}}(Bundle savedInstanceState, String rootKey) \{}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00044}00044             setPreferencesFromResource(R.xml.root\_preferences, rootKey);}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00045}00045         \}}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00046}00046     \}}
+\DoxyCodeLine{\Hypertarget{_settings_activity_8java_source_l00047}00047 \}}
 
 \end{DoxyCode}

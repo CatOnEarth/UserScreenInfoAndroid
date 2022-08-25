@@ -1,12 +1,11 @@
 <map id="com.snail.userscreen.ui.account.AccountFragment" name="com.snail.userscreen.ui.account.AccountFragment">
-<area shape="rect" id="node1" title=" " alt="" coords="753,263,968,305"/>
-<area shape="rect" id="node2" title=" " alt="" coords="402,108,479,135"/>
-<area shape="rect" id="node3" href="$classcom_1_1snail_1_1userscreen_1_1databinding_1_1_fragment_account_binding.html" title=" " alt="" coords="331,159,551,201"/>
-<area shape="rect" id="node4" title=" " alt="" coords="19,71,112,97"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,121,125,148"/>
-<area shape="rect" id="node6" title=" " alt="" coords="35,172,95,199"/>
-<area shape="rect" id="node7" title=" " alt="" coords="30,248,101,275"/>
-<area shape="rect" id="node8" title=" " alt="" coords="28,20,103,47"/>
-<area shape="rect" id="node9" title=" " alt="" coords="413,349,469,376"/>
-<area shape="rect" id="node10" title=" " alt="" coords="375,400,507,427"/>
+<area shape="rect" id="node1" title=" " alt="" coords="501,257,715,299"/>
+<area shape="rect" id="node2" title=" " alt="" coords="137,117,215,143"/>
+<area shape="rect" id="node3" href="$classcom_1_1snail_1_1userscreen_1_1databinding_1_1_fragment_account_binding.html" title=" " alt="" coords="239,109,459,151"/>
+<area shape="rect" id="node4" title=" " alt="" coords="247,5,340,32"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,5,125,32"/>
+<area shape="rect" id="node6" title=" " alt="" coords="150,5,210,32"/>
+<area shape="rect" id="node7" title=" " alt="" coords="570,5,641,32"/>
+<area shape="rect" id="node8" title=" " alt="" coords="364,5,439,32"/>
+<area shape="rect" id="node9" title=" " alt="" coords="852,117,908,143"/>
 </map>

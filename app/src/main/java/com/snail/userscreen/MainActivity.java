@@ -23,18 +23,32 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.snail.userscreen.databinding.ActivityMainBinding;
 
+/**
+ * Main class of application
+ */
 public class MainActivity extends AppCompatActivity implements DrawerLayout.DrawerListener {
 
+    /** The Openable layout indicating that the Navigation button should be displayed as a drawer symbol when it is not being shown as an Up button */
     private AppBarConfiguration mAppBarConfiguration;
 
+    /** TextView which display username in NavigationView */
     private TextView textViewUsernameNavView;
+    /** TextView which display user's email in NavigationView */
     private TextView textViewUserEmailNavView;
 
+    /** Object points to a file containing key-value pairs and provides simple methods to read and write them */
     private SharedPreferences mSettings;
+    /** Name file to save preferences */
     public static final String APP_PREFERENCES            = "user_info";
+    /** Key to save username in preferences */
     public static final String APP_PREFERENCES_USERNAME   = "user_name";
+    /** Key to save user's email in preferences */
     public static final String APP_PREFERENCES_USER_EMAIL = "user_email";
 
+    /** onCreate method of MainActivity
+     *
+     * @param savedInstanceState a reference to a Bundle object that is passed into the onCreate method of every Android Activity
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,12 +79,24 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
     }
 
+    /** Create menu
+     *
+     * @param menu xml file, which contains list of menu items
+     * @return true if menu display
+     * @return false if menu don't display
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
+    /**Make any action if menu's item was clicked
+     *
+     * @param item item selected in menu
+     * @return true if action complete
+     * @return false if action don't complete
+     */
     @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -81,11 +107,17 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         return super.onOptionsItemSelected(item);
     }
 
+    /** Start setting activity */
     private void startSettingActivity() {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 
+    /**This method is called whenever the user chooses to navigate Up within your application's activity hierarchy from the action bar.
+     *
+     * @return true if Up navigation completed successfully and this Activity was finished
+     * @return false otherwise
+     */
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -93,9 +125,18 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                 || super.onSupportNavigateUp();
     }
 
+    /**Called when a drawer's position changes.
+     *
+     * @param drawerView The child view that was moved
+     * @param slideOffset The new offset of this drawer within its range, from 0-1
+     */
     @Override
     public void onDrawerSlide(@NonNull View drawerView, float slideOffset) { }
 
+    /**Called when a drawer has settled in a completely open state. The drawer is interactive at this point.
+     *
+     * @param drawerView Drawer view that is now open
+     */
     @Override
     public void onDrawerOpened(@NonNull View drawerView) {
         textViewUsernameNavView.setText(mSettings.getString(APP_PREFERENCES_USERNAME,
@@ -104,9 +145,17 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                                                             getResources().getString(R.string.nav_header_subtitle)));
     }
 
+    /**Called when a drawer's position changes.
+     *
+     * @param drawerView Drawer view that is now closed
+     */
     @Override
     public void onDrawerClosed(@NonNull View drawerView) {  }
 
+    /**Called when the drawer motion state changes.
+     *
+     * @param newState The new drawer motion state
+     */
     @Override
     public void onDrawerStateChanged(int newState) {  }
 }

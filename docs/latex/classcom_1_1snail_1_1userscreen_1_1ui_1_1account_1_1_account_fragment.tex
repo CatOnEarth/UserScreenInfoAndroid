@@ -2,8 +2,7 @@
 \label{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment}\index{com.snail.userscreen.ui.account.AccountFragment@{com.snail.userscreen.ui.account.AccountFragment}}
 
 
-Inheritance diagram for com.\+snail.\+userscreen.\+ui.\+account.\+Account\+Fragment\+:
-\nopagebreak
+Inheritance diagram for com.\+snail.\+userscreen.\+ui.\+account.\+Account\+Fragment\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -52,15 +51,13 @@ Edit\+Text \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1
 final String \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment_acd03bf7606c6e3271f5829f0709b1548}{KEY\+\_\+\+SAVED\+\_\+\+INSTANCE\+\_\+\+USERNAME}} = \char`\"{}ed\+\_\+text\+\_\+username\char`\"{}
 \item 
 final String \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment_a7c8fcad2930ed3aef9e10c068b724033}{KEY\+\_\+\+SAVED\+\_\+\+INSTANCE\+\_\+\+USER\+\_\+\+EMAIL}} = \char`\"{}ed\+\_\+text\+\_\+user\+\_\+email\char`\"{}
-\item 
-Shared\+Preferences \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment_a6bd904fd750e2c2ac04d15b9c4093b86}{m\+Settings}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+Account fragment 
 
-
-Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00024}{24}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
+Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00025}{25}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
 
 
 
@@ -71,12 +68,11 @@ Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00024}{24}} 
 \doxysubsubsection{\texorpdfstring{clearInfo()}{clearInfo()}}
 {\footnotesize\ttfamily void com.\+snail.\+userscreen.\+ui.\+account.\+Account\+Fragment.\+clear\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Clear edittext username and email 
 
+Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00115}{115}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
 
-Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00094}{94}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
-
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -89,12 +85,11 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{closeKeyboard()}{closeKeyboard()}}
 {\footnotesize\ttfamily void com.\+snail.\+userscreen.\+ui.\+account.\+Account\+Fragment.\+close\+Keyboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Hide keyboard 
 
+Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00087}{87}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
 
-Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00073}{73}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
-
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -107,12 +102,18 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{IsInfoCorrect()}{IsInfoCorrect()}}
 {\footnotesize\ttfamily boolean com.\+snail.\+userscreen.\+ui.\+account.\+Account\+Fragment.\+Is\+Info\+Correct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Check correction input username and email
+
+\begin{DoxyReturn}{Returns}
+true if correct input 
+
+false if incorrect input 
+\end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00099}{99}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
+Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00125}{125}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -125,12 +126,25 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{onCreateView()}{onCreateView()}}
 {\footnotesize\ttfamily View com.\+snail.\+userscreen.\+ui.\+account.\+Account\+Fragment.\+on\+Create\+View (\begin{DoxyParamCaption}\item[{@Non\+Null Layout\+Inflater}]{inflater,  }\item[{View\+Group}]{container,  }\item[{Bundle}]{saved\+Instance\+State }\end{DoxyParamCaption})}
 
+Called to have the fragment instantiate its user interface view
 
 
-Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00036}{36}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
+\begin{DoxyParams}{Parameters}
+{\em inflater} & Layout\+Inflater\+: The Layout\+Inflater object that can be used to inflate any views in the fragment, \\
+\hline
+{\em container} & View\+Group\+: If non-\/null, this is the parent view that the fragment\textquotesingle{}s UI should be attached to. The fragment should not add the view itself, but this can be used to generate the Layout\+Params of the view. \\
+\hline
+{\em saved\+Instance\+State} & Bundle\+: If non-\/null, this fragment is being re-\/constructed from a previous saved state as given here. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the View for the fragment\textquotesingle{}s UI, or null. 
+\end{DoxyReturn}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00047}{47}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -143,9 +157,9 @@ Here is the call graph for this function\+:
 \doxysubsubsection{\texorpdfstring{onDestroyView()}{onDestroyView()}}
 {\footnotesize\ttfamily void com.\+snail.\+userscreen.\+ui.\+account.\+Account\+Fragment.\+on\+Destroy\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Called when the view previously created by on\+Create\+View(\+Layout\+Inflater, View\+Group, Bundle) has been detached from the fragment 
 
-
-Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00114}{114}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
+Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00147}{147}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment_a47c7f867e11eaa2d2bf5fc4f6604c497}\label{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment_a47c7f867e11eaa2d2bf5fc4f6604c497}} 
 \index{com.snail.userscreen.ui.account.AccountFragment@{com.snail.userscreen.ui.account.AccountFragment}!onSaveInstanceState@{onSaveInstanceState}}
@@ -153,9 +167,16 @@ Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00114}{114}}
 \doxysubsubsection{\texorpdfstring{onSaveInstanceState()}{onSaveInstanceState()}}
 {\footnotesize\ttfamily void com.\+snail.\+userscreen.\+ui.\+account.\+Account\+Fragment.\+on\+Save\+Instance\+State (\begin{DoxyParamCaption}\item[{@Non\+Null Bundle}]{out\+State }\end{DoxyParamCaption})}
 
+Called to retrieve per-\/instance state from an activity before being killed so that the state can be restored
 
 
-Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00105}{105}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
+\begin{DoxyParams}{Parameters}
+{\em out\+State} & associative array, i.\+e. storing key-\/value pairs \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00135}{135}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment_a1a5f822ee36ea22ac14a15c7b32b237f}\label{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment_a1a5f822ee36ea22ac14a15c7b32b237f}} 
 \index{com.snail.userscreen.ui.account.AccountFragment@{com.snail.userscreen.ui.account.AccountFragment}!saveUserInformation@{saveUserInformation}}
@@ -163,20 +184,18 @@ Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00105}{105}}
 \doxysubsubsection{\texorpdfstring{saveUserInformation()}{saveUserInformation()}}
 {\footnotesize\ttfamily void com.\+snail.\+userscreen.\+ui.\+account.\+Account\+Fragment.\+save\+User\+Information (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Save information about user 
 
+Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00099}{99}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
 
-Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00082}{82}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
-
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment_a1a5f822ee36ea22ac14a15c7b32b237f_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -192,9 +211,9 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{binding}{binding}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1databinding_1_1_fragment_account_binding}{Fragment\+Account\+Binding}} com.\+snail.\+userscreen.\+ui.\+account.\+Account\+Fragment.\+binding\hspace{0.3cm}{\ttfamily [private]}}
 
+Allows you to bind UI components to instances to data sources in your application using a declarative format, non-\/programmatically. 
 
-
-Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00026}{26}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
+Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00028}{28}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment_aa5b8426510811bd3429fafaeff473607}\label{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment_aa5b8426510811bd3429fafaeff473607}} 
 \index{com.snail.userscreen.ui.account.AccountFragment@{com.snail.userscreen.ui.account.AccountFragment}!editTextAccEmailUser@{editTextAccEmailUser}}
@@ -202,9 +221,9 @@ Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00026}{26}} 
 \doxysubsubsection{\texorpdfstring{editTextAccEmailUser}{editTextAccEmailUser}}
 {\footnotesize\ttfamily Edit\+Text com.\+snail.\+userscreen.\+ui.\+account.\+Account\+Fragment.\+edit\+Text\+Acc\+Email\+User\hspace{0.3cm}{\ttfamily [private]}}
 
+Edit\+Text user\textquotesingle{}s email 
 
-
-Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00029}{29}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
+Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00033}{33}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment_a0a9cf60b89f22f39b2ea7e1703619ddb}\label{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment_a0a9cf60b89f22f39b2ea7e1703619ddb}} 
 \index{com.snail.userscreen.ui.account.AccountFragment@{com.snail.userscreen.ui.account.AccountFragment}!editTextAccUserName@{editTextAccUserName}}
@@ -212,9 +231,9 @@ Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00029}{29}} 
 \doxysubsubsection{\texorpdfstring{editTextAccUserName}{editTextAccUserName}}
 {\footnotesize\ttfamily Edit\+Text com.\+snail.\+userscreen.\+ui.\+account.\+Account\+Fragment.\+edit\+Text\+Acc\+User\+Name\hspace{0.3cm}{\ttfamily [private]}}
 
+Edit\+Text username 
 
-
-Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00028}{28}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
+Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00031}{31}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment_a7c8fcad2930ed3aef9e10c068b724033}\label{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment_a7c8fcad2930ed3aef9e10c068b724033}} 
 \index{com.snail.userscreen.ui.account.AccountFragment@{com.snail.userscreen.ui.account.AccountFragment}!KEY\_SAVED\_INSTANCE\_USER\_EMAIL@{KEY\_SAVED\_INSTANCE\_USER\_EMAIL}}
@@ -222,9 +241,9 @@ Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00028}{28}} 
 \doxysubsubsection{\texorpdfstring{KEY\_SAVED\_INSTANCE\_USER\_EMAIL}{KEY\_SAVED\_INSTANCE\_USER\_EMAIL}}
 {\footnotesize\ttfamily final String com.\+snail.\+userscreen.\+ui.\+account.\+Account\+Fragment.\+KEY\+\_\+\+SAVED\+\_\+\+INSTANCE\+\_\+\+USER\+\_\+\+EMAIL = \char`\"{}ed\+\_\+text\+\_\+user\+\_\+email\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
 
+Key of user\textquotesingle{}s email to saved instance 
 
-
-Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00032}{32}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
+Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00038}{38}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment_acd03bf7606c6e3271f5829f0709b1548}\label{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment_acd03bf7606c6e3271f5829f0709b1548}} 
 \index{com.snail.userscreen.ui.account.AccountFragment@{com.snail.userscreen.ui.account.AccountFragment}!KEY\_SAVED\_INSTANCE\_USERNAME@{KEY\_SAVED\_INSTANCE\_USERNAME}}
@@ -232,19 +251,10 @@ Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00032}{32}} 
 \doxysubsubsection{\texorpdfstring{KEY\_SAVED\_INSTANCE\_USERNAME}{KEY\_SAVED\_INSTANCE\_USERNAME}}
 {\footnotesize\ttfamily final String com.\+snail.\+userscreen.\+ui.\+account.\+Account\+Fragment.\+KEY\+\_\+\+SAVED\+\_\+\+INSTANCE\+\_\+\+USERNAME = \char`\"{}ed\+\_\+text\+\_\+username\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
 
+Key of username to saved instance ~\newline
+ 
 
-
-Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00031}{31}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
-
-\mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment_a6bd904fd750e2c2ac04d15b9c4093b86}\label{classcom_1_1snail_1_1userscreen_1_1ui_1_1account_1_1_account_fragment_a6bd904fd750e2c2ac04d15b9c4093b86}} 
-\index{com.snail.userscreen.ui.account.AccountFragment@{com.snail.userscreen.ui.account.AccountFragment}!mSettings@{mSettings}}
-\index{mSettings@{mSettings}!com.snail.userscreen.ui.account.AccountFragment@{com.snail.userscreen.ui.account.AccountFragment}}
-\doxysubsubsection{\texorpdfstring{mSettings}{mSettings}}
-{\footnotesize\ttfamily Shared\+Preferences com.\+snail.\+userscreen.\+ui.\+account.\+Account\+Fragment.\+m\+Settings\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00034}{34}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
+Definition at line \mbox{\hyperlink{_account_fragment_8java_source_l00036}{36}} of file \mbox{\hyperlink{_account_fragment_8java_source}{Account\+Fragment.\+java}}.
 
 
 

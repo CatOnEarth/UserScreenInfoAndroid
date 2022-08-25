@@ -2,8 +2,7 @@
 \label{classcom_1_1snail_1_1userscreen_1_1_main_activity}\index{com.snail.userscreen.MainActivity@{com.snail.userscreen.MainActivity}}
 
 
-Inheritance diagram for com.\+snail.\+userscreen.\+Main\+Activity\+:
-\nopagebreak
+Inheritance diagram for com.\+snail.\+userscreen.\+Main\+Activity\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for com.\+snail.\+userscreen.\+Main\+Activity\+:
 \end{figure}
 
 
-Collaboration diagram for com.\+snail.\+userscreen.\+Main\+Activity\+:
-\nopagebreak
+Collaboration diagram for com.\+snail.\+userscreen.\+Main\+Activity\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -70,9 +68,9 @@ Shared\+Preferences \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_ac
 
 
 \doxysubsection{Detailed Description}
+Main class of application 
 
-
-Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00026}{26}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00029}{29}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
 
 
 
@@ -83,12 +81,18 @@ Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00026}{26}} of 
 \doxysubsubsection{\texorpdfstring{onCreate()}{onCreate()}}
 {\footnotesize\ttfamily void com.\+snail.\+userscreen.\+Main\+Activity.\+on\+Create (\begin{DoxyParamCaption}\item[{Bundle}]{saved\+Instance\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
+on\+Create method of \mbox{\hyperlink{classcom_1_1snail_1_1userscreen_1_1_main_activity}{Main\+Activity}}
 
 
-Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00039}{39}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+\begin{DoxyParams}{Parameters}
+{\em saved\+Instance\+State} & a reference to a Bundle object that is passed into the on\+Create method of every Android Activity \\
+\hline
+\end{DoxyParams}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00053}{53}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -101,9 +105,21 @@ Here is the call graph for this function\+:
 \doxysubsubsection{\texorpdfstring{onCreateOptionsMenu()}{onCreateOptionsMenu()}}
 {\footnotesize\ttfamily boolean com.\+snail.\+userscreen.\+Main\+Activity.\+on\+Create\+Options\+Menu (\begin{DoxyParamCaption}\item[{Menu}]{menu }\end{DoxyParamCaption})}
 
+Create menu
 
 
-Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00069}{69}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+\begin{DoxyParams}{Parameters}
+{\em menu} & xml file, which contains list of menu items \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if menu display 
+
+false if menu don\textquotesingle{}t display 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00089}{89}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1_main_activity_a451816cc80ebe83f0f8d89ed8e824449}\label{classcom_1_1snail_1_1userscreen_1_1_main_activity_a451816cc80ebe83f0f8d89ed8e824449}} 
 \index{com.snail.userscreen.MainActivity@{com.snail.userscreen.MainActivity}!onDrawerClosed@{onDrawerClosed}}
@@ -111,9 +127,16 @@ Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00069}{69}} of 
 \doxysubsubsection{\texorpdfstring{onDrawerClosed()}{onDrawerClosed()}}
 {\footnotesize\ttfamily void com.\+snail.\+userscreen.\+Main\+Activity.\+on\+Drawer\+Closed (\begin{DoxyParamCaption}\item[{@Non\+Null View}]{drawer\+View }\end{DoxyParamCaption})}
 
+Called when a drawer\textquotesingle{}s position changes.
 
 
-Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00108}{108}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+\begin{DoxyParams}{Parameters}
+{\em drawer\+View} & Drawer view that is now closed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00153}{153}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1_main_activity_aaccb321bcc1e2a52667e2552bd2cd147}\label{classcom_1_1snail_1_1userscreen_1_1_main_activity_aaccb321bcc1e2a52667e2552bd2cd147}} 
 \index{com.snail.userscreen.MainActivity@{com.snail.userscreen.MainActivity}!onDrawerOpened@{onDrawerOpened}}
@@ -121,9 +144,16 @@ Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00108}{108}} of
 \doxysubsubsection{\texorpdfstring{onDrawerOpened()}{onDrawerOpened()}}
 {\footnotesize\ttfamily void com.\+snail.\+userscreen.\+Main\+Activity.\+on\+Drawer\+Opened (\begin{DoxyParamCaption}\item[{@Non\+Null View}]{drawer\+View }\end{DoxyParamCaption})}
 
+Called when a drawer has settled in a completely open state. The drawer is interactive at this point.
 
 
-Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00100}{100}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+\begin{DoxyParams}{Parameters}
+{\em drawer\+View} & Drawer view that is now open \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00141}{141}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1_main_activity_a64202199555148738409bcc07e429f33}\label{classcom_1_1snail_1_1userscreen_1_1_main_activity_a64202199555148738409bcc07e429f33}} 
 \index{com.snail.userscreen.MainActivity@{com.snail.userscreen.MainActivity}!onDrawerSlide@{onDrawerSlide}}
@@ -131,9 +161,18 @@ Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00100}{100}} of
 \doxysubsubsection{\texorpdfstring{onDrawerSlide()}{onDrawerSlide()}}
 {\footnotesize\ttfamily void com.\+snail.\+userscreen.\+Main\+Activity.\+on\+Drawer\+Slide (\begin{DoxyParamCaption}\item[{@Non\+Null View}]{drawer\+View,  }\item[{float}]{slide\+Offset }\end{DoxyParamCaption})}
 
+Called when a drawer\textquotesingle{}s position changes.
 
 
-Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00097}{97}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+\begin{DoxyParams}{Parameters}
+{\em drawer\+View} & The child view that was moved \\
+\hline
+{\em slide\+Offset} & The new offset of this drawer within its range, from 0-\/1 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00134}{134}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1_main_activity_aed046c2ae686dc59814f1e57afc07cc9}\label{classcom_1_1snail_1_1userscreen_1_1_main_activity_aed046c2ae686dc59814f1e57afc07cc9}} 
 \index{com.snail.userscreen.MainActivity@{com.snail.userscreen.MainActivity}!onDrawerStateChanged@{onDrawerStateChanged}}
@@ -141,9 +180,16 @@ Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00097}{97}} of 
 \doxysubsubsection{\texorpdfstring{onDrawerStateChanged()}{onDrawerStateChanged()}}
 {\footnotesize\ttfamily void com.\+snail.\+userscreen.\+Main\+Activity.\+on\+Drawer\+State\+Changed (\begin{DoxyParamCaption}\item[{int}]{new\+State }\end{DoxyParamCaption})}
 
+Called when the drawer motion state changes.
 
 
-Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00111}{111}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+\begin{DoxyParams}{Parameters}
+{\em new\+State} & The new drawer motion state \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00160}{160}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1_main_activity_a8e6c868b0832678836b26c61f72c66ee}\label{classcom_1_1snail_1_1userscreen_1_1_main_activity_a8e6c868b0832678836b26c61f72c66ee}} 
 \index{com.snail.userscreen.MainActivity@{com.snail.userscreen.MainActivity}!onOptionsItemSelected@{onOptionsItemSelected}}
@@ -151,12 +197,23 @@ Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00111}{111}} of
 \doxysubsubsection{\texorpdfstring{onOptionsItemSelected()}{onOptionsItemSelected()}}
 {\footnotesize\ttfamily boolean com.\+snail.\+userscreen.\+Main\+Activity.\+on\+Options\+Item\+Selected (\begin{DoxyParamCaption}\item[{Menu\+Item}]{item }\end{DoxyParamCaption})}
 
+Make any action if menu\textquotesingle{}s item was clicked
 
 
-Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00076}{76}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+\begin{DoxyParams}{Parameters}
+{\em item} & item selected in menu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if action complete 
 
-Here is the call graph for this function\+:
-\nopagebreak
+false if action don\textquotesingle{}t complete 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00102}{102}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -169,9 +226,16 @@ Here is the call graph for this function\+:
 \doxysubsubsection{\texorpdfstring{onSupportNavigateUp()}{onSupportNavigateUp()}}
 {\footnotesize\ttfamily boolean com.\+snail.\+userscreen.\+Main\+Activity.\+on\+Support\+Navigate\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+This method is called whenever the user chooses to navigate Up within your application\textquotesingle{}s activity hierarchy from the action bar.
+
+\begin{DoxyReturn}{Returns}
+true if Up navigation completed successfully and this Activity was finished 
+
+false otherwise 
+\end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00090}{90}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00122}{122}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1_main_activity_a84a48fbbd07c5bc135b7b5b8034e5a15}\label{classcom_1_1snail_1_1userscreen_1_1_main_activity_a84a48fbbd07c5bc135b7b5b8034e5a15}} 
 \index{com.snail.userscreen.MainActivity@{com.snail.userscreen.MainActivity}!startSettingActivity@{startSettingActivity}}
@@ -179,12 +243,11 @@ Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00090}{90}} of 
 \doxysubsubsection{\texorpdfstring{startSettingActivity()}{startSettingActivity()}}
 {\footnotesize\ttfamily void com.\+snail.\+userscreen.\+Main\+Activity.\+start\+Setting\+Activity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Start setting activity 
 
+Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00111}{111}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
 
-Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00084}{84}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
-
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -200,9 +263,9 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{APP\_PREFERENCES}{APP\_PREFERENCES}}
 {\footnotesize\ttfamily final String com.\+snail.\+userscreen.\+Main\+Activity.\+APP\+\_\+\+PREFERENCES = \char`\"{}user\+\_\+info\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
 
+Name file to save preferences 
 
-
-Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00034}{34}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00042}{42}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1_main_activity_af4c078707aabaa11bca3f66a7d301e7c}\label{classcom_1_1snail_1_1userscreen_1_1_main_activity_af4c078707aabaa11bca3f66a7d301e7c}} 
 \index{com.snail.userscreen.MainActivity@{com.snail.userscreen.MainActivity}!APP\_PREFERENCES\_USER\_EMAIL@{APP\_PREFERENCES\_USER\_EMAIL}}
@@ -210,9 +273,9 @@ Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00034}{34}} of 
 \doxysubsubsection{\texorpdfstring{APP\_PREFERENCES\_USER\_EMAIL}{APP\_PREFERENCES\_USER\_EMAIL}}
 {\footnotesize\ttfamily final String com.\+snail.\+userscreen.\+Main\+Activity.\+APP\+\_\+\+PREFERENCES\+\_\+\+USER\+\_\+\+EMAIL = \char`\"{}user\+\_\+email\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
 
+Key to save user\textquotesingle{}s email in preferences 
 
-
-Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00036}{36}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00046}{46}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1_main_activity_ab196869783d634b89dc239ef08f10546}\label{classcom_1_1snail_1_1userscreen_1_1_main_activity_ab196869783d634b89dc239ef08f10546}} 
 \index{com.snail.userscreen.MainActivity@{com.snail.userscreen.MainActivity}!APP\_PREFERENCES\_USERNAME@{APP\_PREFERENCES\_USERNAME}}
@@ -220,9 +283,9 @@ Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00036}{36}} of 
 \doxysubsubsection{\texorpdfstring{APP\_PREFERENCES\_USERNAME}{APP\_PREFERENCES\_USERNAME}}
 {\footnotesize\ttfamily final String com.\+snail.\+userscreen.\+Main\+Activity.\+APP\+\_\+\+PREFERENCES\+\_\+\+USERNAME = \char`\"{}user\+\_\+name\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
 
+Key to save username in preferences 
 
-
-Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00035}{35}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00044}{44}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1_main_activity_a2ac79686c34c90d90a85bd8a20a76063}\label{classcom_1_1snail_1_1userscreen_1_1_main_activity_a2ac79686c34c90d90a85bd8a20a76063}} 
 \index{com.snail.userscreen.MainActivity@{com.snail.userscreen.MainActivity}!mAppBarConfiguration@{mAppBarConfiguration}}
@@ -230,9 +293,9 @@ Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00035}{35}} of 
 \doxysubsubsection{\texorpdfstring{mAppBarConfiguration}{mAppBarConfiguration}}
 {\footnotesize\ttfamily App\+Bar\+Configuration com.\+snail.\+userscreen.\+Main\+Activity.\+m\+App\+Bar\+Configuration\hspace{0.3cm}{\ttfamily [private]}}
 
+The Openable layout indicating that the Navigation button should be displayed as a drawer symbol when it is not being shown as an Up button 
 
-
-Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00028}{28}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00032}{32}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1_main_activity_aa8d7863cafbb327a785d5a8a5583d347}\label{classcom_1_1snail_1_1userscreen_1_1_main_activity_aa8d7863cafbb327a785d5a8a5583d347}} 
 \index{com.snail.userscreen.MainActivity@{com.snail.userscreen.MainActivity}!mSettings@{mSettings}}
@@ -240,9 +303,9 @@ Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00028}{28}} of 
 \doxysubsubsection{\texorpdfstring{mSettings}{mSettings}}
 {\footnotesize\ttfamily Shared\+Preferences com.\+snail.\+userscreen.\+Main\+Activity.\+m\+Settings\hspace{0.3cm}{\ttfamily [private]}}
 
+Object points to a file containing key-\/value pairs and provides simple methods to read and write them 
 
-
-Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00033}{33}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00040}{40}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1_main_activity_af2bec69eba105e34337b579aefc9635c}\label{classcom_1_1snail_1_1userscreen_1_1_main_activity_af2bec69eba105e34337b579aefc9635c}} 
 \index{com.snail.userscreen.MainActivity@{com.snail.userscreen.MainActivity}!textViewUserEmailNavView@{textViewUserEmailNavView}}
@@ -250,9 +313,9 @@ Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00033}{33}} of 
 \doxysubsubsection{\texorpdfstring{textViewUserEmailNavView}{textViewUserEmailNavView}}
 {\footnotesize\ttfamily Text\+View com.\+snail.\+userscreen.\+Main\+Activity.\+text\+View\+User\+Email\+Nav\+View\hspace{0.3cm}{\ttfamily [private]}}
 
+Text\+View which display user\textquotesingle{}s email in Navigation\+View 
 
-
-Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00031}{31}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00037}{37}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
 
 \mbox{\Hypertarget{classcom_1_1snail_1_1userscreen_1_1_main_activity_a1c5ae201e5e6550a9ed4291655e6c552}\label{classcom_1_1snail_1_1userscreen_1_1_main_activity_a1c5ae201e5e6550a9ed4291655e6c552}} 
 \index{com.snail.userscreen.MainActivity@{com.snail.userscreen.MainActivity}!textViewUsernameNavView@{textViewUsernameNavView}}
@@ -260,9 +323,9 @@ Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00031}{31}} of 
 \doxysubsubsection{\texorpdfstring{textViewUsernameNavView}{textViewUsernameNavView}}
 {\footnotesize\ttfamily Text\+View com.\+snail.\+userscreen.\+Main\+Activity.\+text\+View\+Username\+Nav\+View\hspace{0.3cm}{\ttfamily [private]}}
 
+Text\+View which display username in Navigation\+View 
 
-
-Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00030}{30}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
+Definition at line \mbox{\hyperlink{_main_activity_8java_source_l00035}{35}} of file \mbox{\hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}}.
 
 
 
