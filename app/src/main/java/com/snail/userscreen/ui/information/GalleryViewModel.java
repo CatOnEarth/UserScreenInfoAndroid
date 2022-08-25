@@ -1,4 +1,4 @@
-package com.snail.userscreen.ui.gallery;
+package com.snail.userscreen.ui.information;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
