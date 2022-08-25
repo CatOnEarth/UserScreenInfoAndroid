@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "UserScreenAndroid", "index.html", [
+    [ "UserScreenInfoAndroid", "md__r_e_a_d_m_e.html", null ],
     [ "Packages", "namespaces.html", [
       [ "Package List", "namespaces.html", null ]
     ] ],
