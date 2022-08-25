@@ -4,22 +4,22 @@
 
 <p>
     Screenshot account fragment  
+<p>
+<p>
     <img
     src="/screenshots/account_screenshot.png"
     width="30%" 
     height="30%"
-    alt="Alt text"
-    title="Optional title"
     style="display: inline-block; margin: 0 auto; max-width: 300px">
 <p>
 
 <p>
-    Screenshot account fill fragment  
+    Screenshot account fill fragment 
+<p>
+<p> 
     <img
     src="/screenshots/account_fill_screenshot.png"
     width="30%" 
     height="30%"
-    alt="Alt text"
-    title="Optional title"
     style="display: inline-block; margin: 0 auto; max-width: 300px">
 <p>
