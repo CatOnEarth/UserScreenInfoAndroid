@@ -10,7 +10,7 @@ public class ImageViewModel extends ViewModel {
 
     public ImageViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("Просто красивый котик)0)");
     }
 
     public LiveData<String> getText() {
