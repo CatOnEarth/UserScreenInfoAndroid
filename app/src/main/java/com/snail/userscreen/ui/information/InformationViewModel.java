@@ -1,6 +1,9 @@
 package com.snail.userscreen.ui.information;
 
-import static com.snail.userscreen.ui.account.AccountFragment.APP_PREFERENCES;
+
+import static com.snail.userscreen.MainActivity.APP_PREFERENCES;
+import static com.snail.userscreen.MainActivity.APP_PREFERENCES_USERNAME;
+import static com.snail.userscreen.MainActivity.APP_PREFERENCES_USER_EMAIL;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -34,7 +37,7 @@ public class InformationViewModel extends ViewModel {
         SharedPreferences mSettings;
         mSettings = context.requireActivity().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 
-        textUsername.setValue(mSettings.getString("username", ""));
-        textEmailUser.setValue(mSettings.getString("useremail", ""));
+        textUsername.setValue(mSettings.getString( APP_PREFERENCES_USERNAME,   ""));
+        textEmailUser.setValue(mSettings.getString(APP_PREFERENCES_USER_EMAIL, ""));
     }
 }

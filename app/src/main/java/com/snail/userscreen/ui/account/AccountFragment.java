@@ -1,11 +1,16 @@
 package com.snail.userscreen.ui.account;
 
+import static com.snail.userscreen.MainActivity.APP_PREFERENCES;
+import static com.snail.userscreen.MainActivity.APP_PREFERENCES_USERNAME;
+import static com.snail.userscreen.MainActivity.APP_PREFERENCES_USER_EMAIL;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -19,10 +24,12 @@ import com.snail.userscreen.databinding.FragmentAccountBinding;
 public class AccountFragment extends Fragment {
 
     private FragmentAccountBinding binding;
+
     private EditText editTextAccUserName;
     private EditText editTextAccEmailUser;
 
-    public static final String APP_PREFERENCES = "user_info";
+    private final String KEY_SAVED_INSTANCE_USERNAME   = "ed_text_username";
+    private final String KEY_SAVED_INSTANCE_USER_EMAIL = "ed_text_user_email";
 
     private SharedPreferences mSettings;
 
@@ -47,8 +54,8 @@ public class AccountFragment extends Fragment {
             editTextAccUserName.setText("");
             editTextAccEmailUser.setText("");
         } else {
-            editTextAccUserName.setText(savedInstanceState.getString("textusername", ""));
-            editTextAccEmailUser.setText(savedInstanceState.getString("textemailuser", ""));
+            editTextAccUserName.setText(savedInstanceState.getString( KEY_SAVED_INSTANCE_USERNAME,   ""));
+            editTextAccEmailUser.setText(savedInstanceState.getString(KEY_SAVED_INSTANCE_USER_EMAIL, ""));
 
         }
 
@@ -63,26 +70,44 @@ public class AccountFragment extends Fragment {
         return root;
     }
 
-    private void saveUserInformation() {
-        if (IsInfoCorrect()) {
-            SharedPreferences.Editor editor = mSettings.edit();
-            editor.putString("username",  editTextAccUserName.getText().toString());
-            editor.putString("useremail", editTextAccEmailUser.getText().toString());
-            editor.apply();
+    private void closeKeyboard() {
+        View view = requireActivity().getCurrentFocus();
+
+        if (view != null) {
+            InputMethodManager manager = (InputMethodManager) requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+            manager.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
 
+    private void saveUserInformation() {
+        if (IsInfoCorrect()) {
+            SharedPreferences.Editor editor = mSettings.edit();
+            editor.putString(APP_PREFERENCES_USERNAME,   editTextAccUserName.getText().toString());
+            editor.putString(APP_PREFERENCES_USER_EMAIL, editTextAccEmailUser.getText().toString());
+            editor.apply();
+
+            clearInfo();
+            closeKeyboard();
+        }
+    }
+
+    private void clearInfo() {
+        editTextAccUserName.setText( "");
+        editTextAccEmailUser.setText("");
+    }
+
     private boolean IsInfoCorrect() {
-        return editTextAccEmailUser.getText().toString().length() != 0 &&
-                editTextAccUserName.getText().toString().length() != 0;
+        return  editTextAccEmailUser.getText().toString().length() != 0 &&
+                editTextAccUserName.getText().toString().length()  != 0;
     }
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putString("textusername",  editTextAccUserName.getText().toString());
-        outState.putString("textemailuser", editTextAccEmailUser.getText().toString());
-
+        if (editTextAccUserName != null && editTextAccEmailUser != null) {
+            outState.putString(KEY_SAVED_INSTANCE_USERNAME,   editTextAccUserName.getText().toString());
+            outState.putString(KEY_SAVED_INSTANCE_USER_EMAIL, editTextAccEmailUser.getText().toString());
+        }
     }
 
     @Override

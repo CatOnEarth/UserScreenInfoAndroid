@@ -1,8 +1,6 @@
 package com.snail.userscreen;
 
 
-import static com.snail.userscreen.ui.account.AccountFragment.APP_PREFERENCES;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -28,9 +26,14 @@ import com.snail.userscreen.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity implements DrawerLayout.DrawerListener {
 
     private AppBarConfiguration mAppBarConfiguration;
-    public TextView textViewUsernameNavView;
-    public TextView textViewUserEmailNavView;
-    private SharedPreferences mSettings;;
+
+    private TextView textViewUsernameNavView;
+    private TextView textViewUserEmailNavView;
+
+    private SharedPreferences mSettings;
+    public static final String APP_PREFERENCES            = "user_info";
+    public static final String APP_PREFERENCES_USERNAME   = "user_name";
+    public static final String APP_PREFERENCES_USER_EMAIL = "user_email";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +43,10 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
+
         DrawerLayout drawer = binding.drawerLayout;
         drawer.addDrawerListener(this);
+
         NavigationView navigationView = binding.navView;
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -57,8 +62,6 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         textViewUserEmailNavView = headerView.findViewById(R.id.textViewUserEmail);
 
         mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
-        textViewUsernameNavView.setText(mSettings.getString("username", ""));
-        textViewUserEmailNavView.setText(mSettings.getString("useremail", ""));
 
     }
 
@@ -91,22 +94,19 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     }
 
     @Override
-    public void onDrawerSlide(@NonNull View drawerView, float slideOffset) {
-    }
+    public void onDrawerSlide(@NonNull View drawerView, float slideOffset) { }
 
     @Override
     public void onDrawerOpened(@NonNull View drawerView) {
-        textViewUsernameNavView.setText(mSettings.getString("username", ""));
-        textViewUserEmailNavView.setText(mSettings.getString("useremail", ""));
+        textViewUsernameNavView.setText(mSettings.getString(APP_PREFERENCES_USERNAME,
+                                                            getResources().getString(R.string.nav_header_title)));
+        textViewUserEmailNavView.setText(mSettings.getString(APP_PREFERENCES_USER_EMAIL,
+                                                            getResources().getString(R.string.nav_header_subtitle)));
     }
 
     @Override
-    public void onDrawerClosed(@NonNull View drawerView) {
-
-    }
+    public void onDrawerClosed(@NonNull View drawerView) {  }
 
     @Override
-    public void onDrawerStateChanged(int newState) {
-
-    }
+    public void onDrawerStateChanged(int newState) {  }
 }
